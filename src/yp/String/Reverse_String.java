@@ -1,10 +1,12 @@
-package yp.itcast;
+package yp.String;
 
 /**
  * @author RickYinPeng
  * @ClassName Reverse_String
  * @Description LeetCode中第344道题
  * @date 2018/10/14/20:33
+ *
+ * 题目名称：反转字符串
  */
 public class Reverse_String {
     public static void main(String[] args) {

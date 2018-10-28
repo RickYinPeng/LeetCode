@@ -1,4 +1,4 @@
-package yp.itcast;
+package yp.String;
 
 import java.util.HashMap;
 import java.util.LinkedHashMap;

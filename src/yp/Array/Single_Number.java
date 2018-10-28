@@ -1,4 +1,4 @@
-package yp.itcast;
+package yp.Array;
 
 import java.util.HashMap;
 
