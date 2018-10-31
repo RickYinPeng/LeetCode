@@ -5,18 +5,18 @@ import java.util.Arrays;
 /**
  * 数组翻转
  */
-public class Rotate_Array {
+public class 数组翻转 {
     public static void main(String[] args) {
 
         //方法一：
         /*
-        Rotate_Array rotate_array = new Rotate_Array();
+        数组翻转 rotate_array = new 数组翻转();
         int[] nums = {1,2,3,4,5,6};
         rotate_array.rotate(nums,2);
         System.out.println(Arrays.toString(nums));*/
 
         //方法二:
-        Rotate_Array rotate_array = new Rotate_Array();
+        数组翻转 rotate_array = new 数组翻转();
         int[] nums = {1,2,3,4,5,6,7};
         rotate_array.resover(nums,0,nums.length);
         System.out.println(Arrays.toString(nums));

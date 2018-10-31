@@ -6,13 +6,13 @@ import java.util.Arrays;
 
 /**
  * @author RickYinPeng
- * @ClassName Valid_Anagram
+ * @ClassName 有效的字母异位词
  * @Description LeetCode中第242道题
  * @date 2018/10/28/22:37
  *
  * 题目名称：有效的字母异位词
  */
-public class Valid_Anagram {
+public class 有效的字母异位词 {
     public static void main(String[] args) {
         String s = "anagram";
         String t = "nagaram";

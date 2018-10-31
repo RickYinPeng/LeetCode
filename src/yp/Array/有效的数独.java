@@ -4,13 +4,13 @@ import java.util.HashSet;
 
 /**
  * @author RickYinPeng
- * @ClassName Valid_Sudoku
+ * @ClassName 有效的数独
  * @Description LeetCode中第36道题
  * @date 2018/10/9/19:10
  *
  * 题目名称：有效的数独
  */
-public class Valid_Sudoku {
+public class 有效的数独 {
 
     public static void main(String[] args) {
         char[][] board = {

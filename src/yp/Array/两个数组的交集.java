@@ -7,7 +7,7 @@ import java.util.HashMap;
 /**
  * 两个数组的交集
  */
-public class Intersection_of_Two_Arrays_II {
+public class 两个数组的交集 {
     public static void main(String[] args) {
         int[] nums1 = {4,9,5};
         int[] nums2 = {9,4,9,8,4};

@@ -4,13 +4,13 @@ import java.util.Arrays;
 
 /**
  * @author RickYinPeng
- * @ClassName Move_Zeroes
+ * @ClassName 移动零
  * @Description LeetCode中第283道题
  * @date 2018/10/5/22:18
  *
  * 题目名称：移动零
  */
-public class Move_Zeroes {
+public class 移动零 {
 
     public static void main(String[] args) {
         int[] nums = {0,1,0,3,12};

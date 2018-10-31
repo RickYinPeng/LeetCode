@@ -5,7 +5,7 @@ import java.util.HashMap;
 /**
  *只出现一次的数字
  */
-public class Single_Number {
+public class 只出现一次的数字 {
 
     public static void main(String[] args) {
         int[] nums = {4,1,2,1,2};

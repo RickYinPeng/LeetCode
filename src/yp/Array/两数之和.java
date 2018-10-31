@@ -6,13 +6,13 @@ import java.util.Map;
 
 /**
  * @author RickYinPeng
- * @ClassName Two_Sum
+ * @ClassName 两数之和
  * @Description LeetCode中第1道题
  * @date 2018/10/7/10:24
  *
  * 题目名称：两数之和
  */
-public class Two_Sum {
+public class 两数之和 {
     public static void main(String[] args) {
         int[] nums = {2, 7, 11, 15};
         int[] ints = twoSum(nums, 9);

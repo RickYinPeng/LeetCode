@@ -4,13 +4,13 @@ import java.util.Arrays;
 
 /**
  * @author RickYinPeng
- * @ClassName Plus_One
+ * @ClassName 加一
  * @Description LeetCode中第66道题
  * @date 2018/10/3/21:22
  *
  * 题目名称：加一
  */
-public class Plus_One {
+public class 加一 {
     public static void main(String[] args) {
         int[] digits = {9};
         int[] result = plusOne(digits);

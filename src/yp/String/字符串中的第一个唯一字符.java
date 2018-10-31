@@ -6,13 +6,13 @@ import java.util.Map;
 
 /**
  * @author RickYinPeng
- * @ClassName First_Unique_Character_in_a_String
+ * @ClassName 字符串中的第一个唯一字符
  * @Description LeetCode中第387道题
  * @date 2018/10/27/17:36
  *
  * 题目名称：字符串中的第一个唯一字符
  */
-public class First_Unique_Character_in_a_String {
+public class 字符串中的第一个唯一字符 {
 
     public static void main(String[] args) {
         String s = "loveleetcode";

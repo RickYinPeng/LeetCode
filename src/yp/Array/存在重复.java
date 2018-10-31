@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * 存在重复
  */
-public class Existence_repetition {
+public class 存在重复 {
 
     public static void main(String[] args) {
         int[] a = {1,5,-2,-4,0,0};

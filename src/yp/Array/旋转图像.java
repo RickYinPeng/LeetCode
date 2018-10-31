@@ -4,13 +4,13 @@ import org.junit.Test;
 
 /**
  * @author RickYinPeng
- * @ClassName Rotating_image
+ * @ClassName 旋转图像
  * @Description LeetCode中第48道题
  * @date 2018/10/10/22:55
  *
  * 题目名称：旋转图像
  */
-public class Rotating_image {
+public class 旋转图像 {
 
     public static void main(String[] args) {
         int[][] num = {

@@ -2,13 +2,13 @@ package yp.Array;
 
 /**
  * @author RickYinPeng
- * @ClassName Reverse_Integer
+ * @ClassName 颠倒整数
  * @Description LeetCode中第7道题
  * @date 2018/10/26/10:30
  *
  * 题目名称：颠倒整数(这个搜不到)
  */
-public class Reverse_Integer {
+public class 颠倒整数 {
 
     public static void main(String[] args) {
         int x = 1534236469;
