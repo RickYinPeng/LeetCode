@@ -11,11 +11,13 @@ import org.junit.Test;
 public class 字符串转整数 {
 
     public static void main(String[] args) {
-        String str = "  -0012a42";
+        String str = "-9223372036854775809";
         int i = myAtoi(str);
         System.out.println(i);
     }
     public static int myAtoi(String str) {
+        boolean flag = true;
+
         if(str.trim().equals("") || str==null){
             return 0;
         }
@@ -68,6 +70,9 @@ public class 字符串转整数 {
                 int result = aLong.intValue();
                 return result;
             }else{
+                if(c=='-'){
+                    flag = false;
+                }
                 String s = String.valueOf(c);
                 i++;
 
@@ -76,36 +81,39 @@ public class 字符串转整数 {
                         return 0;
                     }
 
-                    while (str.charAt(i)=='0'){
+                    /*while (str.charAt(i)=='0'){
                         i++;
-                    }
+                    }*/
 
                     if(i<str.length()){
                         String x = str.substring(i);
-
-
 
                         x = x.replaceAll("[^\\d]"," ");
 
                         int index = 0;
                         int length = 0;
                         String[] split = x.split(" ");
-                        int j;
+                        /*int j;
                         for (j= 0;j<split.length;j++){
                             //System.out.println(split[j]);
                             if(split[j].length()>length){
                                 length = split[j].length();
                                 index = j;
                             }
-                        }
-
-                        s +=split[index];
+                        }*/
+                        s +=split[0];
 
                         Long aLong = null;
                         try {
                             aLong = Long.valueOf(s);
                         } catch (NumberFormatException e) {
-                            return 0;
+                            //return 0;
+                            if(flag){
+                                return Integer.MAX_VALUE;
+                            }else{
+                                return Integer.MIN_VALUE;
+                            }
+
                         }
 
                         if (aLong > Integer.MAX_VALUE) {
