@@ -11,24 +11,21 @@ import org.junit.Test;
 public class 字符串转整数 {
 
     public static void main(String[] args) {
-        String str = "-9223372036854775809";
-        int i = myAtoi(str);
+        String str = "   +w12312";
+        int i = myAtoi_2(str);
         System.out.println(i);
     }
     public static int myAtoi(String str) {
         boolean flag = true;
-
         if(str.trim().equals("") || str==null){
             return 0;
         }
-
         int i = 0;
         char c = str.charAt(i);
         while(c==' '){
             i++;
             c = str.charAt(i);
         }
-
         //到达非空字符串
         if(i<str.length()){
             //如果第一个字符不是一个有效的整数
@@ -138,23 +135,49 @@ public class 字符串转整数 {
         return 0;
     }
 
-    /*public static int myAtoi(String str) {
-        String s;
-        s = str.replaceAll(" ", "");
-        s = s.replaceAll("[^\\d+-]", "");
-
-        Long aLong = Long.valueOf(s);
-        if (aLong > Integer.MAX_VALUE) {
-            return Integer.MAX_VALUE;
+    public static int myAtoi_2(String str) {
+        // 合法性判断
+        if (str.isEmpty()) return 0;
+        if(str.trim().equals("") || str==null){
+            return 0;
         }
-        if (aLong < Integer.MIN_VALUE) {
-            return Integer.MIN_VALUE;
+        // 正负号标记
+        int sign = 1;
+
+        // 转换值
+        int base = 0;
+
+        // 索引位数
+        int i = 0;
+
+        // 剔除开始空白字符
+        while (str.charAt(i) == ' ')
+            i++;
+
+        // 判断正负号
+        if (str.charAt(i) == '-' || str.charAt(i) == '+')
+            sign = str.charAt(i++) == '-' ? -1 : 1;
+
+        // 索引有效数字字符
+        while (i < str.length() && str.charAt(i) >= '0' && str.charAt(i) <= '9') {
+
+            // that statement is used to test if the num is bigger than INT_MAX after the str[i] is handled, if base > INT_MAX/10,
+            // then base10+ str[i] -‘0’> base10>INT_MAX, or when base== INT_MAX/10, that means all the places are the same as INT_MAX except the ones place, so str[i]>‘7’ is needed.
+            // 上面这段是LeetCode国外站对下面代码的解释。
+            // 简单来说就是
+            // 如果`base > MAX_VALUE/10`，那么`base*10 + new_value` > `base*10` > `MAX_VALUE`。这个应该很容易理解，这种情况下就会发生溢出。
+            // 若`base == INT_MAX/10`，而且`new_value = str.charAt(i++) - '0'`大于`7`，也会发生溢出。因为`MAX_VALUE = 2147483647`
+            if (base > Integer.MAX_VALUE / 10 || (base == Integer.MAX_VALUE / 10 && str.charAt(i) - '0' > 7)) {
+                return (sign == 1) ? Integer.MAX_VALUE : Integer.MIN_VALUE;
+            }
+
+            // 计算转换值
+            base = 10 * base + (str.charAt(i++) - '0');
         }
 
-        int i = aLong.intValue();
-
-        return i;
-    }*/
+        // 计算结果值
+        return base * sign;
+    }
 
     @Test
     public void test(){
@@ -162,8 +185,6 @@ public class 字符串转整数 {
         s = s.replaceAll(" ","");
         s = s.replaceAll("[^\\d+-]","");
         System.out.println("s:"+s);
-
-
         String[] ss = {"adssa","dasd","dasd","dasda"};
     }
 }
