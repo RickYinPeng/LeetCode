@@ -3,7 +3,7 @@ package yp.String;
 /**
  * @author RickYinPeng
  * @ClassName Y_38_报数
- * @Description
+ * @Description LeetCode中第38道题
  * @date 2018/11/6/22:29
  */
 public class Y_38_报数 {
