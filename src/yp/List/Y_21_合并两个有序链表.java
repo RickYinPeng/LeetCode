@@ -25,7 +25,6 @@ public class Y_21_合并两个有序链表 {
         ListNode l8 =new ListNode(0);
 
         ListNode listNode = mergeTwoLists(l1, l4);
-
     }
 
     /**
@@ -48,10 +47,6 @@ public class Y_21_合并两个有序链表 {
         }
         return head;
     }
-
-
-
-
     /**
      * 你是猪吗？？？？？？？？？、
      * @param l1
