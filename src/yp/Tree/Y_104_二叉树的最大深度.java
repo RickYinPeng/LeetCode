@@ -39,7 +39,6 @@ public class Y_104_二叉树的最大深度 {
         if (root != null) {
             stack.add(new Pair(root, 1));
         }
-
         int depth = 0;
         while (!stack.isEmpty()) {
             Pair<TreeNode, Integer> current = stack.poll();
