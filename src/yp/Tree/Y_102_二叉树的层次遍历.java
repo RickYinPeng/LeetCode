@@ -22,14 +22,30 @@ public class Y_102_二叉树的层次遍历 {
     }
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(3);
-        TreeNode a = new TreeNode(9);
-        TreeNode b = new TreeNode(20);
-        TreeNode c = new TreeNode(15);
-        TreeNode d = new TreeNode(7);
-
+        TreeNode root = new TreeNode(0);
+        TreeNode a = new TreeNode(2);
+        TreeNode b = new TreeNode(4);
+        TreeNode c = new TreeNode(1);
+        TreeNode d = new TreeNode(3);
+        TreeNode e = new TreeNode(-1);
+        TreeNode f = new TreeNode(5);
+        TreeNode g = new TreeNode(1);
+        TreeNode h = new TreeNode(6);
+        TreeNode i = new TreeNode(8);
         root.left = a;
         root.right = b;
+
+        a.left = c;
+
+        c.left = f;
+        c.right = g;
+
+        b.left = d;
+        b.right = e;
+
+        d.right = h;
+        e.right = i;
+
         b.left = c;
         b.right = d;
 
@@ -38,36 +54,54 @@ public class Y_102_二叉树的层次遍历 {
     }
 
     public static List<List<Integer>> levelOrder(TreeNode root) {
-        if (root==null){
+        if (root == null) {
             return new ArrayList<>();
         }
-        int high = 0;
         ArrayDeque<TreeNode> treeNodeQueue = new ArrayDeque<>();
 
         treeNodeQueue.add(root);
 
         List<List<Integer>> lists = new ArrayList<>();
-        List<Integer> rootlist = new ArrayList<>();
-        rootlist.add(root.val);
-        lists.add(rootlist);
         while (!treeNodeQueue.isEmpty()) {
-            //List<Integer> list = new ArrayList<>();
-            List<Integer> list = lists.get(high);
-            TreeNode first = treeNodeQueue.poll();
-            //System.out.println(first.val);
-            if (first.left != null) {
-                treeNodeQueue.add(first.left);
-                list.add(first.left.val);
+            ArrayList<Integer> list = new ArrayList<>();
+            int size = treeNodeQueue.size();
+            for(int i = 0;i<size;i++){
+                TreeNode node = treeNodeQueue.poll();
+                list.add(node.val);
+                if(node.left!=null){
+                    treeNodeQueue.add(node.left);
+                }
+                if(node.right!=null){
+                    treeNodeQueue.add(node.right);
+                }
             }
-            if (first.right != null) {
-                treeNodeQueue.add(first.right);
-                list.add(first.right.val);
-            }
-            if (list.size() > 0) {
-                lists.add(list);
-            }
-            high++;
+            lists.add(list);
         }
         return lists;
     }
+
+    public static Integer searchNodeHigh(Integer level, TreeNode root, TreeNode target) {
+        int high = -1;
+        if (root == null) {
+            return -1;
+        }
+        if (root.val == target.val) {
+            return level;
+        }
+        if (root.left != null) {
+            high = searchNodeHigh(level + 1, root.left, target);
+        }
+        if (high != -1) {
+            return high;
+        }
+
+        if (root.right != null) {
+            high = searchNodeHigh(level + 1, root.right, target);
+        }
+        if (high != -1) {
+            return high;
+        }
+        return -1;
+    }
+
 }
