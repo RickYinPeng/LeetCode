@@ -15,7 +15,6 @@ public class Y_102_二叉树的层次遍历 {
         int val;
         TreeNode left;
         TreeNode right;
-
         TreeNode(int x) {
             val = x;
         }
@@ -103,5 +102,4 @@ public class Y_102_二叉树的层次遍历 {
         }
         return -1;
     }
-
 }
