@@ -51,7 +51,7 @@ public class Y_101_对称二叉树 {
         System.out.println(Arrays.toString(arr));
         for(int i = 0,j= arr.length-1;i!=j;i++,j--){
             if(arr[i]!=arr[j]){
-                return false;     
+                return false;
             }
         }
         return true;
