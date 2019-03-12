@@ -65,7 +65,6 @@ public class Y_101_对称二叉树 {
         if(root.left!=null){
             InOrder(root.left);
         }
-
         list.add(root.val);
         if(root.right!=null){
             InOrder(root.right);
