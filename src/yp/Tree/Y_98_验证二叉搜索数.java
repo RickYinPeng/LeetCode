@@ -15,7 +15,7 @@ public class Y_98_验证二叉搜索数 {
       TreeNode right;
       TreeNode(int x) { val = x; }
     }
-
+ 
     /**
      * 利用二叉排序树中序遍历是一个有序数列的性质来做的
      * @param root
