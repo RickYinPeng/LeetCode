@@ -7,8 +7,6 @@ package yp;
  * @date 2019/3/26/20:07
  */
 public class Y_02_两数相加 {
-
-
     static class ListNode {
         int val;
         ListNode next;
