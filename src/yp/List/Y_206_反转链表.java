@@ -27,7 +27,6 @@ public class Y_206_反转链表 {
             if(first==head){
                 ListNode temp = first.next;
                 first.next = Pre;
-
                 Pre = first;
                 first = temp;
             }else {
@@ -40,5 +39,4 @@ public class Y_206_反转链表 {
         first.next = Pre;
         return first;
     }
-
 }
