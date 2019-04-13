@@ -25,8 +25,5 @@ public class Test_08_跳台阶 {
         Integer result = JumpFloor(target-1)+ JumpFloor(target-2);
         map.put(target,result);
         return result;
-
     }
-
-
 }
