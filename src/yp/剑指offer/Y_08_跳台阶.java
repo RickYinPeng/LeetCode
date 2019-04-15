@@ -4,11 +4,11 @@ import java.util.HashMap;
 
 /**
  * @author RickYinPeng
- * @ClassName Test_08_跳台阶
+ * @ClassName Y_08_跳台阶
  * @Description
  * @date 2019/4/13/10:47
  */
-public class Test_08_跳台阶 {
+public class Y_08_跳台阶 {
     public static void main(String[] args) {
     }
     static HashMap<Integer,Integer> map = new HashMap<>(50);
