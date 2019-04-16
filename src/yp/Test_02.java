@@ -1,5 +1,6 @@
 package yp;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 /**
@@ -11,12 +12,14 @@ import java.util.Scanner;
 public class Test_02 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int m = sc.nextInt();
+
         int n = sc.nextInt();
         int[] a = new int[n];
         for(int i = 0;i<n;i++){
             a[i] = sc.nextInt();
         }
+        Arrays.sort(a);
+        int m = sc.nextInt();
         int count = 0;
         int index = a.length-1;
         while (m!=0){

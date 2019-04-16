@@ -11,13 +11,12 @@ import java.util.Scanner;
  */
 public class Test_03 {
     public static void main(String[] args) {
-        System.out.println();
         int n;
         int x;
         int t;
         int[] s = new int[100];
         Scanner sc = new Scanner(System.in);
-        x = sc.nextInt();
+
         n = sc.nextInt();
 
         int i;
@@ -27,6 +26,7 @@ public class Test_03 {
         for(i = 0;i<n;i++){
             s[i] = sc.nextInt();
         }
+        x = sc.nextInt();
 
         Arrays.sort(s);
         System.out.println(Arrays.toString(s));
