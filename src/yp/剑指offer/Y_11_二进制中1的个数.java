@@ -12,7 +12,11 @@ public class Y_11_二进制中1的个数 {
         System.out.println(i);
     }
 
-
+    /**
+     * 自己的解法
+     * @param n
+     * @return
+     */
     public static int NumberOf1(int n) {
         String string = Integer.toBinaryString(n);
         System.out.println(string);
@@ -23,6 +27,20 @@ public class Y_11_二进制中1的个数 {
             if((index ^ Integer.parseInt(String.valueOf(c)))==1){
                 count++;
             }
+        }
+        return count;
+    }
+
+    /**
+     * 骚操作解法
+     * @param n
+     * @return
+     */
+    public static int NumberOf1_2(int n) {
+        int count = 0;
+        while (n!=0){
+            count++;
+            n = (n-1)&n;
         }
         return count;
     }
