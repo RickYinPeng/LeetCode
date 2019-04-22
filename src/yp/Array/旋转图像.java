@@ -25,7 +25,6 @@ public class 旋转图像 {
             }
             System.out.println();
         }
-
     }
 
     public static void rotate(int[][] matrix) {
@@ -53,8 +52,6 @@ public class 旋转图像 {
                 System.out.println(a);
                 System.out.println("["+i+","+j+"]");
                 matrix[i][j] = a;
-
-
                 i++;
                 count_j++;
             }
