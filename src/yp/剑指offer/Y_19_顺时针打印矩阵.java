@@ -24,7 +24,7 @@ public class Y_19_顺时针打印矩阵 {
 
         while (tR<=dR && tC<=dC){
             printEdge(matrix,tR++,tC++,dR--,dC--);
-        } 
+        }
         return arr;
     }
 
@@ -73,6 +73,4 @@ public class Y_19_顺时针打印矩阵 {
             }
         }
     }
-
-
 }
