@@ -24,7 +24,6 @@ public class Y_20_包含min函数的栈 {
             minstack.push(min);
         }
     }
-
     public void pop() {
         datastack.pop();
         minstack.pop();
