@@ -28,22 +28,15 @@ public class Y_02_两数相加 {
         ListNode l1 = new ListNode(2);
         ListNode l2 = new ListNode(4);
         ListNode l3 = new ListNode(3);
-
         l1.next = l2;
         l2.next = l3;
-
         ListNode l7 = new ListNode(5);
         ListNode l8 = new ListNode(6);
         ListNode l9 = new ListNode(4);
-
         l7.next = l8;
         l8.next = l9;
-
-
         ListNode listNode = addTwoNumbers2(l1, l7);
-
         System.out.println(listNode);
-
     }
 
     public static ListNode addTwoNumbers2(ListNode l1, ListNode l2) {
@@ -138,22 +131,11 @@ public class Y_02_两数相加 {
                 listNode1 = listNode1.next;
             }
         }
-
-
-
-
         if(jinwei==1){
             ListNode l = new ListNode(1);
             cur.next = l;
             cur = cur.next;
         }
-
-
-
         return head;
-
-
     }
-
-
 }
