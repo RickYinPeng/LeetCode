@@ -10,11 +10,9 @@ public class Y_02_两数相加 {
     static class ListNode {
         int val;
         ListNode next;
-
         ListNode(int x) {
             val = x;
         }
-
         @Override
         public String toString() {
             return "ListNode{" +
@@ -32,21 +30,18 @@ public class Y_02_两数相加 {
         l2.next = l3;
         ListNode l7 = new ListNode(5);
         ListNode l8 = new ListNode(6);
-        ListNode l9 = new ListNode(4);
+        ListNode l9 = new ListNode(4 );
         l7.next = l8;
         l8.next = l9;
         ListNode listNode = addTwoNumbers2(l1, l7);
         System.out.println(listNode);
     }
-
     public static ListNode addTwoNumbers2(ListNode l1, ListNode l2) {
         ListNode listNode1 = l1;
         ListNode listNode2 = l2;
-
         int jinwei = 0;
         ListNode head = null;
         ListNode cur = null;
-
         while (listNode1!=null && listNode2!=null){
             int sum = listNode1.val + listNode2.val;
             //没有进位
