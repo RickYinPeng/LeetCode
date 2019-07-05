@@ -49,7 +49,7 @@ public class Y_19_顺时针打印矩阵 {
             int curC = tC;
             int curR = tR;
             while (curC!=dC){
-                //System.out.print(m[tR][curC]+" ");
+                /*System.out.print(m[tR][curC]+" ");*/
                 arr.add(m[tR][curC]);
                 curC++;
             }
