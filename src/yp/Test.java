@@ -29,7 +29,6 @@ public class Test {
                         test.increase();
                 }
             });
-
         }
         Thread.sleep(3000);
         System.out.println(test.inc);
